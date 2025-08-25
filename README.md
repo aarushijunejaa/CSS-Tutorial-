@@ -26,7 +26,7 @@ Each folder is named as **Day-XX** and contains:
 - `style.css` → CSS code written for the day  
 
 ---
-📌 How to Use This Repo
+## 📌 How to Use This Repo
 
 This repo is not just my personal journey — you can also refer to it if:
 
