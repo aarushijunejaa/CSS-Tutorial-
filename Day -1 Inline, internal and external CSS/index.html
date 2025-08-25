@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline, Internal and External CSS</title>
+
+    <!-- Internal CSS example -->
+    <style>
+        p {
+            color: green;
+            font-size: 18px;
+            background-color: #f0f0f0;
+            padding: 5px;
+        }
+    </style>
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Inline CSS -->
+    <div style="background-color: yellow; color: blue; padding: 5px;">
+        This is styled with <b>inline CSS</b>
+    </div>
+
+    <!-- Internal CSS -->
+    <p>
+        This paragraph is styled with <b>internal CSS</b> (inside &lt;style&gt; tag in head).
+    </p>
+
+    <!-- External CSS -->
+    <h1>
+        This heading is styled with <b>external CSS</b> (style.css file).
+    </h1>
+</body>
+</html>
