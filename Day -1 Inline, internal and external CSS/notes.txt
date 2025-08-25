@@ -1,0 +1,89 @@
+# Notes: When to Use Inline, Internal, and External CSS  
+
+CSS can be applied in **three main ways**. Each has its own definition, use case, and drawbacks.  
+
+---
+
+## 1. Inline CSS  
+- **Definition:** CSS is written directly inside an element’s `style` attribute.  
+- **Example:**  
+  ```html
+  <p style="color: red; font-size: 18px;">This is inline styled text.</p>
+When to use:
+
+For quick testing or very small changes.
+
+When you want to override styles for just one specific element.
+
+Drawbacks:
+
+Not reusable.
+
+Clutters the HTML.
+
+Hard to maintain in larger projects.
+
+2. Internal CSS
+Definition: CSS is written inside a <style> tag within the HTML file (inside <head>).
+
+Example:
+
+
+<head>
+  <style>
+    h1 {
+      color: blue;
+      background-color: lightgray;
+    }
+  </style>
+</head>
+When to use:
+
+For small projects or single-page websites.
+
+When you don’t need multiple HTML files sharing the same CSS.
+
+Drawbacks:
+
+Makes the HTML file bigger.
+
+Cannot be reused across multiple pages.
+
+3. External CSS
+Definition: CSS is placed in a separate .css file and linked using <link> inside the HTML <head>.
+
+Example:
+
+
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+css
+
+/* style.css */
+h1 {
+  color: white;
+  background-color: black;
+}
+When to use:
+
+For medium to large projects.
+
+When multiple pages share the same styling.
+
+Best for maintainability and clean code structure.
+
+Drawbacks:
+
+Requires an additional HTTP request (but can be cached).
+
+Slight delay in loading styles compared to inline/internal.
+
+✅ Summary:
+
+Use Inline CSS → For quick fixes or one-off elements.
+
+Use Internal CSS → For small projects or single-page apps.
+
+Use External CSS → For big projects, reusable styles, and professional development.
+
