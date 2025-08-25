@@ -1,9 +1,8 @@
 # 🌸 CSS Tutorial Journey  
 
-Welcome to my **daily CSS learning journey** 🎀  
-This repository documents my **day-by-day progress** in CSS – from basics to advanced concepts.  
+Welcome to my **CSS learning journey** 🎀  
+This repository documents my **topic-by-topic progress** in CSS – from basics to advanced concepts.  
 It’s my way to stay **consistent, accountable, and showcase my growth**.  
-
 ---
 
 ## 📅 Progress Tracker  
@@ -18,12 +17,15 @@ It’s my way to stay **consistent, accountable, and showcase my growth**.
 
 ---
 
-## 📖 Structure  
+## 📖 Structure
 
-Each folder is named as **Day-XX** and contains:  
-- `notes.md` → Key takeaways & explanations  
-- `example.html` → Practice HTML file (if needed)  
-- `style.css` → CSS code written for the day  
+Each folder is named as XX-TopicName and contains:
+
+notes.md → Key takeaways & explanations
+
+example.html → Practice HTML file (if needed)
+
+style.css → CSS code written for the topic  
 
 ---
 ## 📌 How to Use This Repo
