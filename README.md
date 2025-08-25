@@ -26,7 +26,17 @@ Each folder is named as **Day-XX** and contains:
 - `style.css` → CSS code written for the day  
 
 ---
+📌 How to Use This Repo
 
+This repo is not just my personal journey — you can also refer to it if:
+
+You’re starting with CSS and want simple day-wise learning.
+
+You need ready-to-use examples (HTML + CSS).
+
+You want short notes instead of long tutorials.
+
+Feel free to fork it, star it ⭐, or use the notes/code for your own practice!
 
 ## ✨ Why this repo?  
 
