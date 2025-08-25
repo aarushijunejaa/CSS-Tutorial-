@@ -1,0 +1,22 @@
+# 🌸 Introduction to CSS 🌸  
+
+## What is CSS?  
+- CSS = **Cascading Style Sheets**.  
+- It is used to **style and design** web pages.  
+- Controls: colors, fonts, backgrounds, layouts, animations.  
+
+---
+
+## How CSS Works?  
+- You write CSS rules that target **HTML elements**.  
+- Each rule has:  
+  - **Selector** → chooses the element (e.g., `p`, `h1`, `.class`)  
+  - **Properties** → what to change (e.g., `color`, `font-size`)  
+  - **Values** → the setting (e.g., `red`, `20px`)  
+
+Example:  
+```css
+p {
+  color: red;
+  font-size: 20px;
+}
