@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Boxmodel</title>
+    <style>
+        /* ---------------------------
+           Common Box Styling
+        ---------------------------- */
+        .box {
+            background-color: aqua; /* background color fills content + padding area */
+        }
+
+        /* ---------------------------
+           Box 1
+           - text color = yellow
+           - padding, margin, border applied
+           - height set with border-box
+        ---------------------------- */
+        .box1 {
+            color: yellow;
+
+            /* Inner spacing between content and border */
+            padding: 10px;
+
+            /* Outer spacing between elements (collapses with adjacent vertical margins) */
+            margin: 25px;
+
+            /* Border sits between padding and margin */
+            border: 2px solid blue;
+
+            /* Fixed height (includes padding + border due to box-sizing) */
+            height: 200px;
+
+            /* box-sizing: border-box makes width/height include padding & border */
+            box-sizing: border-box;
+        }
+
+        /* ---------------------------
+           Box 2 – same properties, red text
+        ---------------------------- */
+        .box2 {
+            color: red;
+            padding: 10px;
+            margin: 25px;
+            border: 2px solid blue;
+            height: 200px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        CSS Box Model Structure:
+        +-----------------------------+
+        |          Margin             |   (outer spacing between elements)
+        +-----------------------------+
+        |          Border             |   (edge around the box)
+        +-----------------------------+
+        |          Padding            |   (space between border & content)
+        +-----------------------------+
+        |          Content            |   (text, images, etc.)
+        +-----------------------------+
+    -->
+
+    <div class="box box1">
+        I am a box
+    </div>
+
+    <div class="box box2">
+        I am another box
+    </div>
+</body>
+
+</html>
+
+<!-- 
+    📌 Margin Collapse:
+    - When two vertical margins (top/bottom) meet, they combine into a single margin which will be max of bothe the margins(max (margin1, margin2))
+      instead of adding up.
+    - Example: 
+        If box1 has margin-bottom: 25px and box2 has margin-top: 25px,
+        the space between them is 25px (not 50px).
+    - Horizontal margins (left/right) do NOT collapse.
+-->
