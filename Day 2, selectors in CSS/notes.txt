@@ -1,0 +1,31 @@
+Summary (Day 2 – CSS Selectors)
+
+Element, Class, ID selectors →
+
+Element selector applies to all tags of that type (e.g., all <div>).
+
+Class selector (.) lets you style multiple elements that share the same class.
+
+ID selector (#) applies to one unique element with that specific ID.
+
+Child vs Descendant selectors →
+
+Child selector (>) only targets the direct children of a parent (e.g., <div > p> affects only <p> directly inside <div>).
+
+Descendant selector (space) targets all nested elements inside, no matter how deep (e.g., <div p> affects <p> inside <div>, even if wrapped in <article>).
+
+Universal selector (*) →
+
+Targets every element on the page.
+
+Commonly used to reset margins and paddings for a consistent base.
+
+Pseudo-classes (links) →
+
+:link → styles for unvisited links.
+
+:visited → styles for links already visited.
+
+:hover → styles when the user hovers over the link.
+
+:active → styles when the link is being clicked.
