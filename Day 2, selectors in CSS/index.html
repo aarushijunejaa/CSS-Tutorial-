@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /*element selector
+        div{
+            background-color: red;
+        }
+             */
+          /* class selector beginning with dot(.) */
+        .red{
+            background-color: red;
+        }
+         /* id selector- beginning with hashtag(#) */
+        #green{
+            background-color: green;
+        }
+
+         /* chile selector - only on direct child */
+         div > p {
+            background-color: aqua;
+            color: blue;
+         }
+
+         /*descendant selector*/
+         div p {
+            color: blue;
+            background-color:aqua ;
+         }
+         /*universal styling*/
+         * {margin: 0;
+            padding: 0px;;
+
+         }
+           
+    </style>
+</head>
+<body>
+    <div>
+        I am a division 
+        <p>hello i am the paragraph with the styling from child selector.</p>
+
+    </div>
+    <div>
+        <article>
+            <p>
+                hello i am getting the styles from descendant selector.
+            </p>
+        </article>
+    </div>
+
+    <div class ="red">
+        i am new div with class selector 
+    </div>
+    <div id="green">
+        i am a division with id green 
+    </div>
+    
+</body>
+</html>
