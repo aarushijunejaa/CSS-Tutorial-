@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing Units Example</title>
+    <style>
+        /* 
+         * CSS Sizing Units
+         * ----------------
+         * Absolute units: px, pt, cm, in (fixed, not responsive)
+         * Relative units: %, em, rem, vw, vh, vmin, vmax (responsive)
+         *
+         * - px: pixel, fixed size unit (not scalable on zoom)
+         * - %: relative to parent element's size
+         * - em: relative to parent element's font-size
+         * - rem: relative to root element's font-size (html)
+         * - vw: 1% of viewport width
+         * - vh: 1% of viewport height
+         * - vmin: 1% of smaller dimension (width or height)
+         * - vmax: 1% of larger dimension (width or height)
+         */
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Root font-size = 12px, so:
+           1rem = 12px
+           2rem = 24px */
+        html {
+            font-size: 12px;
+        }
+
+        .box {
+            box-sizing: border-box;
+            border: 2px solid black;
+
+            /* Using vw (viewport width): 
+               - 80vw = 80% of viewport width 
+               - responsive horizontally */
+            width: 80vw;
+
+            /* Using vh (viewport height): 
+               - 10vh = 10% of viewport height */
+            height: 10vh;
+
+            margin: auto;
+            background-color: aquamarine;
+        }
+
+        .container {
+            box-sizing: border-box;
+            border: 2px solid black;
+            width: 80vw;
+
+            /* height: 80vh; → fixed based on viewport */
+            /* min-height: 80vh → ensures it expands if content grows */
+            min-height: 80vh;
+
+            margin: 23px auto;
+
+            /* Font size in px (absolute unit) */
+            font-size: 18px;
+            background-color: aquamarine;
+        }
+
+        /* Direct children of container */
+        .container > div {
+            /* 2em = 2 × parent font-size (18px) = 36px */
+            font-size: 2em;
+
+            border: 2px solid red;
+
+            /* 50% of parent width */
+            width: 50%;
+        }
+
+        /* Grandchildren inside container */
+        .container > div > div {
+            border: 2px solid blue;
+
+            /* Again, 50% relative to parent div */
+            width: 50%;
+        }
+
+        .mycont {
+            border: 2px solid black;
+            box-sizing: border-box;
+            margin: 23px auto;
+            color: rgb(0, 0, 0);
+
+            /* Font-size in px (absolute, fixed size) */
+            font-size: 22px;
+
+            /* 80vw → responsive width (depends on screen width) */
+            /* 100vmin could also be used (scales with smaller dimension) */
+            width: 80vw;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Values_and_Units -->
+
+    <!-- This box uses vw (width) and vh (height) -->
+    <div class="box">
+        This is a box (80vw × 10vh)
+    </div>
+
+    <!-- Container using min-height in vh -->
+    <div class="container">
+        <div>
+            <!-- Parent div has font-size: 2em = 36px 
+                 and width: 50% of container -->
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis necessitatibus quia quod iste dolorem
+            voluptatem fuga quidem aspernatur. Nihil ipsa sint quae, beatae explicabo saepe impedit laboriosam magni
+            cupiditate expedita voluptates consequatur odit veritatis dolorum doloribus. Iure nemo odit dicta, delectus,
+            modi reiciendis maiores ut quo adipisci libero quam laboriosam nihil voluptate natus nobis earum ad?
+
+            <div>
+                <!-- This inner div = 50% width of parent (red box)
+                     → effectively 25% of outer container -->
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero omnis voluptas est aliquam, dolores rem laudantium nulla maiores odio fugit, totam voluptatem saepe!
+            </div>
+        </div>
+
+        <!-- Expand text content to see how min-height works -->
+    </div>
+
+    <!-- Another container using px font-size and vw width -->
+    <div class="mycont">
+        I am another container (80vw wide, 22px font-size)
+    </div>
+</body>
+
+</html>
