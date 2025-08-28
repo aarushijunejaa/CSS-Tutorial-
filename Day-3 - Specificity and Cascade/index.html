@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity Example</title>
+    <style>
+        /* 
+         * CSS Specificity & Cascade Example
+         * --------------------------------
+         * Specificity is a way for browsers to decide 
+         * which CSS property values are the most relevant 
+         * to an element and should be applied.
+         * 
+         * Order of priority (low → high):
+         *  1. Element selectors (e.g., h1, p, div) → weight = 1
+         *  2. Class selectors (.class), attribute selectors ([attr=value]), pseudo-classes (:hover, :focus) → weight = 10
+         *  3. ID selectors (#id) → weight = 100
+         *  4. Inline styles (style="...") → weight = 1000
+         * 
+         * Cascade Rule: If specificity is the same, the *later* rule in CSS wins.
+         */
+
+        /* The specificity of this selector is 1  */
+        h1 {
+            color: aqua; /* Default element selector */
+        }
+
+        /* The specificity of this selector is 10  */
+        .cpurple {
+            color: purple; /* Class selector */
+        }
+
+        /* The specificity of this selector is 1 + 10 = 11  */
+        h1.yellow {
+            color: yellow; /* Element + Class */
+        }
+
+        /* Attribute selector: specificity = 10 */
+        [data-x=a] {
+            color: maroon;
+        }
+
+        /* Class selector: specificity = 10 */
+        .cred {
+            color: red;
+        }
+
+        /* 
+         * Complex selector:
+         * a.harryclass.rohan-class[href]:hover
+         * Specificity = 1 (element) + 10 (class) + 10 (class) + 10 (attribute) + 10 (pseudo-class) = 41
+         */
+        a.harryclass.rohan-class[href]:hover {
+            color: blueviolet;
+        }
+
+        /* 
+         * Note: If we added an ID selector like #unique, 
+         * it would override all above (specificity = 100).
+         */
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- 
+          This h1 has multiple classes: yellow, cred, cpurple
+          Applied rules:
+          - h1 {aqua} (spec = 1)
+          - .cpurple {purple} (spec = 10)
+          - h1.yellow {yellow} (spec = 11)
+          - [data-x=a] {maroon} (spec = 10)
+          - .cred {red} (spec = 10)
+
+          Final applied color = YELLOW (highest specificity: 11)
+          This shows cascade + specificity in action.
+        -->
+        <h1 class="yellow cred cpurple" data-x="a">CSS Specificity</h1>
+    </div>
+</body>
+
+</html>
