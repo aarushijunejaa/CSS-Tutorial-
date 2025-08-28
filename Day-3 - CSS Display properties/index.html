@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 
+         * CSS Display Property
+         * --------------------
+         * Controls how an element is displayed in the document flow.
+         * Common values:
+         * 
+         * block → starts on new line, takes full width (e.g., div, p, h1)
+         * inline → sits beside other inline elements, ignores width/height (e.g., span, a, strong)
+         * inline-block → sits inline but respects width/height
+         * none → removes element completely from the page (no space reserved)
+         * visibility: hidden → hides element but space is still reserved
+         * flex/grid → special layout modes
+         */
+
+        .box {
+            border: 2px solid blue;
+
+            /* Inline-block: 
+               - Elements appear side-by-side
+               - Accept width & height
+               - Similar to inline, but box-like */
+            display: inline-block;
+
+            width: 344px;
+            padding: 45px;
+            margin: 34px;
+        }
+
+        .box1 {
+            /* Uncomment below one at a time to test: */
+
+            /* display: none; */
+            /* → Element is completely removed from layout. */
+
+            /* visibility: hidden; */
+            /* → Element is invisible, but still takes up space. */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/display -->
+
+    <!-- Example with inline-block boxes -->
+    <div class="box box1">
+        I am a box (box1)
+    </div>
+
+    <div class="box">
+        I am another box (inline-block → sits beside first one)
+    </div>
+
+    <!-- Inline elements: they do not start on a new line -->
+    <span>I am inline text,</span>
+    <span>so I sit beside the previous span.</span>
+</body>
+
+</html>
